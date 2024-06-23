@@ -15,7 +15,9 @@ export class CustomLabelDirective {
   constructor() {
     effect(() => {
       this._htmlElement.nativeElement.style.color = this.color();
+    });
 
+    effect(() => {
       if (!this.errors()) {
         this._htmlElement.nativeElement.innerText = '';
 
